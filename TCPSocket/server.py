@@ -14,6 +14,8 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)
 
 # listening
+
+
 def handle_client(conn, addr):
     print(f"[NEW CONNECTION] {addr} connected.")
 
