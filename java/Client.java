@@ -66,6 +66,6 @@ public class Client
 
 	public static void main(String args[])
 	{
-		Client client = new Client("172.20.10.6", 5000);
+		Client client = new Client("172.20.10.6", 23);
 	}
 }
