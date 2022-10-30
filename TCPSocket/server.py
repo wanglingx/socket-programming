@@ -14,8 +14,6 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)
 
 # listening
-
-
 def handle_client(conn, addr):
     print(f"[NEW CONNECTION] {addr} connected.")
 
@@ -29,7 +27,7 @@ def handle_client(conn, addr):
                 connected = False
 
             print(f"[{addr}] {msg}")
-            conn.send("msg : client received".encode(FORMAT))
+            conn.send("msg : Hello {msg}".encode(FORMAT))
 
     conn.close()
 
