@@ -1,6 +1,7 @@
 
 // A Java program for a Client
 import java.net.*;
+// import java.util.Scanner;
 import java.io.*;
 
 public class Client
@@ -9,6 +10,7 @@ public class Client
 	private Socket socket		 = null;
 	private BufferedReader input = null;
 	private DataOutputStream out	 = null;
+	// private Scanner scn;
 
 	// constructor to put ip address and port
 	public Client(String address, int port)
@@ -20,7 +22,7 @@ public class Client
 			System.out.println("Connected");
 
 			// takes input from terminal
-			// input = new DataInputStream(System.in);
+			// input = new DataInputStream(socket.getInputStream());
 			input = new BufferedReader(new InputStreamReader(System.in));
 
 			// sends output to the socket
@@ -39,7 +41,6 @@ public class Client
 			catch(IOException i)
 			{
 				System.out.println(i);
-				System.out.println("err1");
 			}
 		}
 
@@ -53,7 +54,6 @@ public class Client
 		catch(IOException i)
 		{
 			System.out.println(i);
-			System.out.println("err2");
 		}
 
 		}
